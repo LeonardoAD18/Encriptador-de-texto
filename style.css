@@ -208,6 +208,65 @@ main{
     transition: .05s;   
 } 
 
+.contenedor-desarrollador{
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+.contenedor-desarrollador h4{
+    font-family:'Poppins', sans-serif;
+    color: #000000;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 580;
+    margin-left: 230px;
+}
+
+.social-bar{
+    position: fixed;
+    right: 0;
+    top: 35%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+}
+
+.icon{
+    color: white;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all .5s;
+}
+
+.icon-github{
+    background:#171515;
+    border-radius: 1rem 0 0 0 ;
+}
+
+.icon-linkedin2{
+    background: #0e76a8;
+    border-radius: 0 0 0 1rem;
+}
+
+.icon:first-child{
+    border-radius: 1rem 0 0 0;
+}
+
+.icon:last-child{
+    border-radius: 0 0 0 1rem;
+}
+
+.icon:hover{
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0 0 0 0.42);
+
+}
+
 /* Responsive */
 
 @media screen and (max-width:768px) {
