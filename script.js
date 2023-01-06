@@ -78,7 +78,7 @@
         if( frase == ""){
                alert("No ingresó ningún texto")
           }else{
-            ocultar();
+            ocultarEncriptador();
            }
 
         }
