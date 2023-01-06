@@ -40,7 +40,7 @@ main{
 
 .seccion-izquierda{
     width: 70%;
-    height: 100%;
+    height: 850px;
     box-sizing: border-box;
 }
 
@@ -111,7 +111,7 @@ main{
 
 .seccion-derecha{
     width: 22%;
-    height: 87%;
+    height: 700px;
     background-color: white;
     margin:0px 100px 50px 0;
     box-sizing: border-box;
@@ -161,7 +161,7 @@ main{
 
 #seccion-derecha__contenedor-resultado{
     width: 88%;
-    height: 75%;
+    height: 500px;
     color: #495057;
     font-size: 18px;
     font-weight: bold;
@@ -170,7 +170,7 @@ main{
     margin: 50 15 15 19;
     box-sizing: border-box;
     border: none;
-    background: #FFFFFF;
+    background: #ffffff;
     outline: none;  
 }
 
@@ -211,7 +211,6 @@ main{
 .contenedor-desarrollador{
     display: flex;
     justify-content: center;
-    /* background-color: red; */
 }
 
 .contenedor-desarrollador h4{
@@ -221,6 +220,13 @@ main{
     text-transform: capitalize;
     font-weight: 580;
     margin-left: 230px;
+}
+
+
+.redes-sociales{
+    box-sizing: border-box;
+    background-color: red;
+    height: 0px;
 }
 
 .social-bar{
@@ -276,7 +282,7 @@ main{
     /* background-color: blue; */
   }
 
-  header, .seccion-izquierda, #seccion-izquierda__texto-ingresado, .botones, .seccion-derecha, .seccion-derecha__contenedor-img, .seccion-derecha__contenedor-h3, .seccion-derecha__contenedor-msj,#seccion-derecha__contenedor-resultado, #btn-copiar{
+  header, .seccion-izquierda, #seccion-izquierda__texto-ingresado, .botones, .contenedor-desarrollador, .seccion-derecha, .seccion-derecha__contenedor-img, .seccion-derecha__contenedor-h3, .seccion-derecha__contenedor-msj,#seccion-derecha__contenedor-resultado, #btn-copiar{
 
     width: auto;
 }
@@ -289,16 +295,16 @@ header{
 }
 
 .seccion-izquierda{
-    height: 45%;
+    height: 380px;
     font-size: 40px;
 }
 
 #seccion-izquierda__texto-ingresado{
     width: 100%;
     height: 100%;
-    font-size: 30px;
+    font-size: 27px;
     margin: 0;
-    padding: 50 20 20 20 ;
+    padding: 50 40 40 40 ;
 }
 
 ::placeholder{
@@ -306,7 +312,7 @@ header{
 }
 
 .botones{
-    height: 50%;
+    height: 150px;
     flex-direction: column;
     margin: 0 0 0 0;
 }
@@ -330,8 +336,7 @@ header{
 }
 
 .seccion-derecha{
-    height: 27%;
-    margin: 20px;
+    margin: 170 15 15 15;
 }
 
 .seccion-derecha__contenedor-h3{
@@ -353,12 +358,29 @@ header{
 
 #seccion-derecha__contenedor-resultado{
     width: 90%;
-    height: 60%;
+    height: 220px;
     font-size: 20px;
     font-weight: bold;
-    margin: 20px;
+    margin: 20 20 10 20;
     padding: 0px;
 }
+
+#copiar{
+    height: 32px;
+    margin-bottom: 20px;
+}
+
+.contenedor-desarrollador h4{
+    display: none;
+    /* margin: 0;
+    font-size: 15px;
+    text-align: left; */
+}
+
+.social-bar{
+    font-size: 1.1rem;
+}
+
 }
 
 

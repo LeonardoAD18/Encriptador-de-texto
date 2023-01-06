@@ -1,7 +1,7 @@
     // Poner focus el textarea de la seccion izquierda
     document.getElementById("seccion-izquierda__texto-ingresado").focus();
 
-    // Guardar en la varibles lo que contienen las siguientes clases o id
+    // Guardar en las varibles lo que contienen las siguientes clases o id
     var contenedorH3 = document.querySelector(".seccion-derecha__contenedor-h3");
     var contenedorImg = document.querySelector(".seccion-derecha__contenedor-img");
     var contenedorMsj = document.querySelector(".seccion-derecha__contenedor-msj");
@@ -51,26 +51,10 @@
 
     }
 
-    // función para copiar el texto encriptado o desencriptado de la sección izquierda
-
-    function copiar(){
-    
-    // Al copiar cambiamos el texto del botón a Copiado
-    var botonCopiar = document.getElementById("copiar");
-    botonCopiar.innerHTML = "Copiado";
-
-    // Borra el texto del textarea de la seccion izquierda
-    document.getElementById("seccion-izquierda__texto-ingresado").value = "";
-    // Copia el texto del contenedor resultado
-    var contenido = document.querySelector("#seccion-derecha__contenedor-resultado");
-    contenido.select();
-    document.execCommand("copy")
-
-    }
 
     // función para ocultar los elementos HTML de la sección derecha, una vez ocultados, manda a llamar a la función encriptador
 
-    function ocultar(){
+    function ocultarEncriptador(){
 
         // Añade clases o id a los elementos HTML 
         contenedorH3.classList.add("ocultar");
@@ -98,6 +82,23 @@
            }
 
         }
+
+        // función para ocultar los elementos HTML de la sección derecha, una vez ocultados, manda a llamar a la función encriptador
+
+    function ocultarDesencriptador(){
+
+      // Añade clases o id a los elementos HTML 
+      contenedorH3.classList.add("ocultar");
+      contenedorImg.classList.add("ocultar");
+      contenedorMsj.classList.add("ocultar");
+      copiarOculto.classList.add("btn-copiar");
+      ocultarTextarea.setAttribute("id","seccion-derecha__ocultar-textarea");
+      ocultarTextarea.id="seccion-derecha__contenedor-resultado";
+      
+      // Manda a llamar la función encriptador
+      desencriptador();
+
+      }
   
     // Función para verificar que se ingreso o no texto, en el caso de que no se muestra un alerta y si existe texto se manda a llamar a la funcion desencriptador.
 
@@ -108,9 +109,28 @@
         if( frase == ""){
                    alert("No hay ningún texto para desencriptar")
           }else{
-            desencriptador();
+            ocultarDesencriptador();
           }
         }
+
+        
+    // función para copiar el texto encriptado o desencriptado de la sección izquierda
+      function copiar(){
+
+      // Al copiar cambiamos el texto del botón a Copiado
+      var botonCopiar = document.getElementById("copiar");
+      botonCopiar.innerHTML = "Copiado";
+  
+      // Borra el texto del textarea de la seccion izquierda
+      document.getElementById("seccion-izquierda__texto-ingresado").value = "";
+      // Copia el texto del contenedor resultado
+      var contenido = document.querySelector("#seccion-derecha__contenedor-resultado");
+      contenido.select();
+      document.execCommand("copy")
+
+      document.getElementById("seccion-izquierda__texto-ingresado").focus();
+  
+      }
 
     // Activadores para llamar a las funciónes a través de los botones
 
