@@ -118,8 +118,9 @@ main{
 
 #btn-encriptar:hover, #copiar:hover{
     color: #0A3871;
-    box-shadow: 0 0 20px #0A3871, 0 0 10px #0A3871, 0 0 15px #0A3871;
     background: #f1f1f1f1;
+    box-shadow: 0 0 20px #0A3871, 0 0 10px #0A3871, 0 0 15px #0A3871;
+    
 }
 
 #btn-desencriptar:hover{
