@@ -8,6 +8,28 @@
     var copiarOculto =  document.querySelector(".ocultar")
     var ocultarTextarea = document.querySelector("#seccion-derecha__ocultar-textarea");
     
+    // funcion que permite solo escribir letras minusculas dentro el input o textarea
+    function soloLetrasMinusculas(e){
+
+       key = e.keyCode || e.which;
+      
+       teclado = String.fromCharCode(key).toLowerCase();
+       letras = "abcdefghijklmnopqrstuvwxyz";
+       especiales = "8-37-38-46-164";
+       teclado_especial = false;
+
+       for(var i in especiales){
+          if(key==especiales[i]){
+              teclado_especial = true;break;
+          }
+        } 
+
+      if(letras.indexOf(teclado)== -1 && ! teclado_especial){
+        return false;
+      }
+    }
+
+
     // función para encriptar el texto ingresado
     function encriptador(){
     // Reiniciar el nombre del botón    
